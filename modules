@@ -1,0 +1,46 @@
+IN PYTHON
+There are modules and libraries
+
+module :  a group  of functions,variables,classes
+A group of  modules is called  libraries
+
+MOdule is low level
+Libraries is high level
+
+>>> import math
+>>> print(math.sqrt(16))
+4.0
+>>> print(math.pi)
+3.141592653589793
+
+Aliasing for modules:
+
+>>> import math as m
+>>> print(m.sqrt(16))
+4.0
+>>> print(m.pi)
+3.141592653589793
+
+---------------------
+import math as m
+from math import * 
+from math import sqrt,pi
+---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

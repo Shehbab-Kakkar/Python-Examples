@@ -1,0 +1,16 @@
+Condition
+
+
+x=firstvalue if condition else second value
+
+x=30 if 10<20 else 40
+print(x)
+
+
+>>> x=10 if 20<30 else 40 if 50<60 else 70;print(x)
+10
+>>> x=10 if 20>30 else 40 if 50>60 else 70;print(x)
+70
+>>> x=10 if 20>30 else 40 if 50<60 else 70;print(x)
+40
+

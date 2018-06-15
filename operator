@@ -1,0 +1,635 @@
+Operators:-
+
+1. Arithmetic Operators
++ - * / % //
+2. Relational Operators  or Comparsion Operators
+3. Logi
+
+In case of //
+
+If both are int ans is int
+If one is float then ans is float
+
+In + operator both  argument should string 
+
+>>> 'durga'+3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> 'durga'+'3'
+'durga3'
+
+=============================================
+* Operator for str type
+
+One item should be string and other is int
+
+>>> "Shehbab"*"3"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+
+
+Noty applicable for int and not for float
+
+>>> "Shehbab"*3.0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+==============================================
+>>> 10**-1
+0.1
+>>> 10**-2
+0.01
+>>> (10+2j)**(10+2j)
+(7741897816.3487+2696517330.882735j)
+>>> 10.5/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: float division by zero
+>>> 10.5//0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: float divmod()
+>>> 10.5%0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: float modulo
+>>> 10**0
+1
+=============================================
+Relational Operators:
+--------------------
+i
+
+ASCII value of character we can check by using 
+
+>>> c='a';print(ord(c))
+
+>>> c='B'
+>>> print("The ASCII value of '" + c + "' is", ord(c))
+The ASCII value of 'B' is 66
+
+>>> a='durga'
+>>> b='darga'
+>>> print(a>b)
+True
+
+
+=============================================
+String and bool 
+
+>>> a=False
+>>> b='True'
+>>> print(a>b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'bool' and 'str'
+==============================================
+We can't use 'bool' and 'str' with relational operators
+>>> a=False
+>>> b='True'
+>>> print(a>b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'bool' and 'str'
+==============================================
+Chaining operator 
+
+10<20<30<40 == True
+10<20<30>40 == False
+
+If all the operators true then only end result is true
+==============================================
+Equality operators:
+
+True and False only it will display. No error
+
+>>> (10+2j)==(10+2j)
+True
+>>> (10+2j)=='durga'
+False
+
+Int and float are comptable but not string and (int|float)
+
+>>> 10==10.0
+True
+>>> 10=='10'
+False
+
+Boolean and Integer are comptable
+
+>>> 1==True   #internally True means one
+True
+>>> 1==False #Internally False means Zero
+False
+
+
+1. Arithmetic Operators
+-------------
+.Division operator always generate float values.
+.'durga'+'soft' ==  durgasoft
+. 'durga'		
+e
+
+==============================================
+
+2. Local Operators;
+  
+
+boolean:
+
+   and   ==  If both the arguments are True then only True
+   or    ==  If atleast one argument is True then True
+   not   == 
+
+>>> True and False
+False
+>>> True or  False
+True
+>>> not True
+False
+>>> not False
+True
+
+For non boolean types:
+
+0 means False
+Non-Zero means True
+Empty String --> False
+
+==============================================
+x and y
+
+if x evaluates to false then result is x otherwise returns y
+
+>>> 10 and 20     #x not false hence we are getting 20 
+20
+
+>>> 0 and 20  #If 0 is False then return 0
+0
+
+==============================================
+
+x or y
+
+>>> #if x is evaluates to True then returns x otherwise return y
+...
+>>> 1 or 0
+1
+>>> 0 or 1
+1
+
+==============================================
+not x
+
+If it evaluate to true then 
+
+>>> not 10 # 10 is True
+False
+>>> not '' # '' is False
+True
+>>> not 0 # 0 is False
+
+=============================================
+Examples:
+>>> 10 or 10/0 # 10 is True (if first is true then second will not executed)
+10
+
+>>> 0  or 10/0 # 0 is False
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+==============================================
+Bitwise Operators:
+
+For int and boolean type we can apply
+
+&  -> if both bits are 1 then only 1 otherwise 0
+|  -> if atleast one bit is 1 then 1 otherwise 0
+^  -> x-or -> if both agruments/bits are different then 1 otherwise 0
+~  -> bitwise complement operator 1-->0  and 0-->1
+<<   -> bitwise left shift
+>>   -> bitwise right shift
+==============================================
+
+>>> 4&5
+4
+>>> 4|5
+5
+>>> 4^5
+1
+
+100
+101
+---
+100  &  4
+---
+101  |  5 
+---
+001  ^  1
+--------------------------------------------------
+Bitwise Complement Operator
+
+==================================================
+Shift Operators
+<<left shift operator
+>> Right shift operator
+
+Left shift
+
+>>> print(10<<2)
+40
+
+0000000..1010   Shift 2 left
+00000..1010__
+00000..101000
+
+Binary to Decimal
+101000 - 40 
+
+Left Hand side vacant cells sign bit 
+
++ve numbers == 0
+-ve numbers == 1
+
+
+======================
+Right shift
+
+>>> print(10>>2)
+2
+
+Right Hand side shift
+
+  000001010
+__0000010//
+=======================
+
+Assignment Operators
+
+>>> a,b,c,d=10,20,30,40
+>>> print(a,b,c,d)
+10 20 30 40
+
+Compound Assignmet operators
+
+x+=10
+
+Increament  and decreament operators not available in Python
+
+>>> x=10
+>>> --x
+10
+>>> x--
+  File "<stdin>", line 1
+    x--
+      ^
+SyntaxError: invalid syntax
+>>> ++x
+10
+>>> x++
+  File "<stdin>", line 1
+    x++
+      ^
+SyntaxError: invalid syntax
+
+...................................
+print(++x) means +(+x) +10 -> 10
+======================
+Ternary operator
+
+x=firstValue if condition else secondValue
+x=30 if 10<20 else 40
+print(40)
+======================
+Special OPerators
+
+1. Identity Operators
+2. Membership Operators
+
+1. Identity Operators
+
+---
+a=10
+b=10  both are point to same oject and memory
+>>> print(a is b)
+True
+>>> print(a is not b)
+False
+---
+>>> a="durga"
+>>> b="durga"
+>>> print(id(a))
+140074678741960
+>>> print(id(b))
+140074678741960
+>>> print(a is b)
+True
+------
+
+'is'  operator  do Address comparison.
+'=='  do content comparison.
+
+E.g:-
+>>> print(id(list1))
+140074678756424
+>>> print(id(list2))
+140074678759368
+>>> print(list1 is list2)
+False
+>>> print(list1 == list2)
+True
+
+------
+Membership Operator:
+
+"in" - in operator applied on one object at a time.
+
+list1=[10,20,30]
+print( 10 in list1)
+print(70 not in list1)
+Result: 
+
+True
+True
+------
+>>> s="Hello Learn Python"
+>>> print("Hello" in s)
+True
+>>> print("L" in s)
+True
+>>> print(" " in s)
+True
+>>> print("p" in s)
+False
+==================================
+Operator precedence order
+
+Unary Operator> binary>   ternary
+~x               x+y     3arguments
+==================================
+a=10+2/3-4*5
+Last precedence to assignment operator
+
+==================================
+Operator Precedence
+
+() == >  Paranthesis
+** == >  Exponential Operator
+~,-  ==>  Unary Operator
+*,/,%,// 
++-
+<<,>>
+&
+^
+|
+>,>=,>,<=,==,!=
+=,+=,-=,*=
+is, is not
+in, no in
+not
+and
+or
+=======================
+Difference bt "import math"  and "from math import *"
+
+
+print(math.sqrt(4))           ||   print(sqrt(4))
+========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

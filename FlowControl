@@ -1,0 +1,128 @@
+"""
+Flow Control:
+
+In which order statements will be executed is decided by flow control
+
+Three Type of Flow COntrol statements:-
+
+
+1. Conditional statements/selection statements
+
+if x 
+   option-1
+else
+   option-2
+   
+if x 
+   action-1
+elif x
+   action-2
+else
+   action-3 
+   
+   
+if
+if-else
+if-elif
+if-elif-else
+
+
+2. Iterative statements:
+
+for loops
+while
+
+"""
+If we know the iternation in advance then we can use FOR LOOP
+If we don't know the iternation in advance then we can use While Loop
+"""
+
+3. Transfer statements:
+
+break 
+continue
+pass
+
+"""
+
+
+==============================================
+"""
+While condition:
+      body
+"""
+x=1
+while x<=10:
+    print(x)
+    x+=1=
+==============================================
+n=int(input("Enter some of number:"))
+sum=0
+i=1
+while i<=n:
+     sum+=i
+     i+=1
+print("The sum of number:",sum)
+
+
+Output> 
+
+Enter some of number: 5
+The sum of number: 15
+==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

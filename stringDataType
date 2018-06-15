@@ -1,0 +1,119 @@
+How to access characters from the string:
+
+1. By using index
+2. By using slicing
+
+1. By using index:
+
+s='durga'
+
+both +ve and -ve index
+
+='durga'
+print(s[-2])
+
+2. Slice operator
+
+
+#!/usr/bin/env python3.6
+#By using slice operator:
+"""
+s[beginindex:endindex:step]
+
+s[0:7:1]
+
+From begin index to end-1 index and everytime increment by 1
+
+"""
+s='0123456789'
+print(s[0:7:2])
+
+"""Ouput: 0246"""
+
+======================================
+print(s[::-2])    // Output: 97531
+print(s[::])     // Output 0123456789
+print(s[0:])    // Output 0123456789
+print(s[2:8:1]) # 2to7    (start,end-1) +ve Output: 234567 
+print(s[8:2:-1]) # 8to3   (start,end+1) -ve         876543
+print(s[-1:-6:-1])# -1,-5 (start,end+1) -ve         98765 
+print(s[:0:-1])                                     987654321
+
+======================================
+s[begin:end:step]
+step ==> +ve forward direction from begin to end-1
+         -ve backward direction from begin to end+1
+======================================
+In forward direction:
+
+default value for begin: 0
+default value for end: length of the string
+default value for step: 1
+
+
+In backward direction:
+
+default value for begin index: -1
+default value for end: -(length of string+1)
+
+print(s[-1:-6:-1])
+
+begin  index -1
+
+print(s[:1:-1])   98765432
+print(s[-5:0:-9]) 5
+======================================
+Mathematical Operators:|||||||||||||||
+--------------------------------------
++  String concatentation both should be  string
+*  String repeating operator one agr should be string and 
+   other should be integer type
+s='durga'+'soft'
+print(s)
+#both argument should be string
+Output: durgasoft
+
+len(s) = TO cal to length of the string
+=======================================
+Question: WAP to access each character of string
+          in forward direction and backward direction
+
+=======================================
+s='0123456789'
+print(s[:])
+print(s[::-1])
+print(s[:0:-1])
+
+<:Output:>
+
+0123456789
+9876543210
+987654321
+=======================================
+
+print('d' not in s)
+print('d'  in s)
+
+=======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

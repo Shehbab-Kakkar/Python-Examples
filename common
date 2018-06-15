@@ -1,0 +1,73 @@
+Python provides some build in functions
+In python everything is object.
+Decimal form
+Binary form
+octal form
+hexa decimal
+0b1111- binary to decimal
+0o1111- decimal to octal
+---
+Identifer
+Reserve words
+Data Types
+------
+Integer----
+bin(15)
+bin(0x342423)
+oct()
+hex()
+
+--- string ----
+
+s='singlequotes'
+s="doublequotes"
+s='''multiple 
+               lines'''
+s="""multiple 
+            lines"""
+print (s)
+-----------------
+slice operator
+
+>>> s='''Durga Sir "python" classes are very helpful'''
+>>> s[2:8]
+'rga Si'
+----------------
+index always start with zero
+Right to left starts from -1
+>>> s='durga'
+>>> s[0]
+'d'
+>>> s[1]
+'u'
+>>> s[-1]
+'a'
+>>> s[-3]
+'r'
+>>> s[-5]
+'d'
+>>> s[-6]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>>
+
+>>> s='durgaTheyHaveToBear'
+>>> s[2:8]
+'rgaThe'
+
+--------------------
+s[:4] fourth position from beginning
+s[-4,-1] starts from fourth position from last  till first
+----------------------
+char ==str type only
+long ==using int only
+----------------------------------
+Type Casting or type corsion:
+int()
+float()
+complex()
+bool()
+str()
+-----------------------------
+

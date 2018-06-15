@@ -1,0 +1,31 @@
+#String replacement operators
+---------------------
+{}  replacement operator
+---------------------
+name="Ram"
+Salary=100
+gf='Soniya'
+print("Hello {0} your salary is {1} and your friend is {2}".format(name,Salary,gf))
+
+Output:
+
+$python3 main.py
+Hello Ram your salary is 100 and your friend is Soniya
+
+
+===========================
+name="Ram"
+Salary=100
+gf='Soniya'
+print("Hello {0} your salary is {1} and your friend is {2}".format(name,Salary,gf))
+print("Hello {} your salary is {} and your friend is {}".format(name,Salary,gf))
+print("Hello {x} your salary is {y} and your friend is {z}".format(y=name,z=Salary,x=gf))
+
+Output:
+
+$python3 main.py
+Hello Ram your salary is 100 and your friend is Soniya
+Hello Ram your salary is 100 and your friend is Soniya
+Hello Soniya your salary is Ram and your friend is 100
+
+==============================

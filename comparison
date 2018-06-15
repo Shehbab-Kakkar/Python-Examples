@@ -1,0 +1,2 @@
+a==b => True  When contents are equal
+a is b => True when both pointing to the same object

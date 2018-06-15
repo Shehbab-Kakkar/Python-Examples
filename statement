@@ -1,0 +1,194 @@
+Input and output statements:
+
+Read data from the Keyboard:-
+
+Python-2:
+
+x=raw_input("Enter some number") ==Str
+
+We required to use typecasting functions
+
+y=input("Enter some number")
+
+Not consider as str type what every type provided
+we are not required typecasting
+
+Means e.g if we are using input type it is int type not need for 
+typecasting.
+
+
+Python-3:-
+
+raw_input is not available in Python3
+
+x=input("Enter some number:")
+
+
+Python3 input function is same as python2 raw_input function
+type casting is required in the input function of Python3
+
+
+==============================
+>>> print("The Sum: ",int(input("Enter First Number: "))+int(input("Enter Second Number: ")))
+Enter First Number: 20
+Enter Second Number: 30
+The Sum:  50
+
+---------
+
+>>> x=int(input("Enter first number:"))
+Enter first number:20
+>>> y=int(input("Enter Second number:"))
+Enter Second number:40
+>>> print("Sum:",x+y)
+Sum: 60
+===============================
+
+Output statments:-
+----
+print() function
+
+form-1:
+
+print() without any arguments New Line will be inserted.
+print("Hello \n Durga") 
+print("Hello \t Durga")
+print("Hello"+"Durga")//Concatenation both argument should be of string type
+print("Durga"*3) // One item should be of integer type
+print("Durga","sdad") //space will be added    output:- Durga sdad
+
+form-2:
+
++==> both arguments should be str type only
+*==> one agrument  should be str and other should be int
+
+================================
+
+form-3:
+
+
+>>> a,b,c=10,20,30
+>>> print("The values are:",a,b,c)
+The values are: 10 20 30
+
+>>> print(a,b,c)
+10 20 30
+
+sep  attributes
+
+>>> print(a,b,c,sep=',') #sep is called separator attribute
+10,20,30
+
+----
+[root@centos7 Python]# cat print.py
+#!/usr/bin/env python3.6
+print("Hello",end=';')
+#Print with  ';' separator in the same line
+print("Student",end='')
+print("Student1",end=':')
+print("Student2")
+[root@centos7 Python]# ./print.py
+Hello;StudentStudent1:Student2
+
+
+'sep' and 'end' Attribute usuage
+
+[root@centos7 Python]# cat print1.py
+#!/usr/bin/env python3.6
+print(10,20,30,40,sep=':',end='>---<')
+print(20,40,50)
+[root@centos7 Python]# ./print1.py
+10:20:30:40>---<20 40 50
+
+=================================
+
+print(formatted string)
+
+%i ==> int type
+%d ==> int type
+%f ==> float type
+%s ==> str type
+
+print("formatted string" %(variable list))
+=================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

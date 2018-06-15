@@ -1,0 +1,713 @@
+------In-built data type
+int --decimal,hex,oct,binary
+float --decimal
+complex -- a+bj , can be floatin point value 10.6+23.4j
+bool -- 
+str  --within '',"",''' ''',""" """,no char datatype
+-------
+bytes
+bytesarray
+range
+list
+tuple
+set
+frozenset
+dict
+None
+------------------
+Type conversion
+Or Type casting
+
+int(10.23)= 10
+int(10+20j) = TypeErro
+int(True) = 1
+int(False)  = 0
+int("10") ==10
+int("10.5") = TypeError
+---------
+float(10) = 10.0
+>>> int("10.5")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '10.5'
+
+float("ten")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: could not convert string to float: 'ten'
+>>> float("ob111")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: could not convert string to float: 'ob111'
+>>>
+-------------------
+Complex()
+
+Type for complex functions
+
+complex(x)       = x+0j
+complex(x,y)     = x+yj
+
+Int,floar,bool,str can be converted to complex
+
+Examples:-
+
+>>> complex(10)
+(10+0j)
+>>> complex(10+20j)
+(10+20j)
+>>> complex(10.5)
+(10.5+0j)
+>>> complex(True)
+(1+0j)
+>>> complex(False)
+0j
+>>> complex("10")
+(10+0j)
+>>> complex("10.0")
+(10+0j)
+>>> complex("10.9")
+(10.9+0j)
+>>> complex("ten")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: complex() arg is a malformed string
+>>> complex("0B101")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: complex() arg is a malformed string
+>>>
+
+ 
+>>> complex(10,20)
+(10+20j)
+>>> complex(True,False)
+(1+0j)
+>>> complex("10","20")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: complex() can't take second arg if first is a string
+
+-------------
+bool()
+
+for in argument
+
+>>> bool(0)
+False
+>>> bool(10)
+True
+------------------
+>>> bool(0.0)
+False
+>>> bool(0.1)
+True
+>>> bool(0+0j)
+False
+>>> bool(0+1j)
+True
+>>> bool('')
+False
+>>> bool(' ')
+True
+>>> bool('durga ')
+True
+-----------
+
+str()
+
+>>> str(10)
+'10'
+>>> str(10.5)
+'10.5'
+>>> str(True)
+'True'
+>>> str(10.5+30.4j)
+'(10.5+30.4j)'
+
+------------
+All fundamental data types are immutable int,float,str,complex
+Immutable Vs Fundamental Data types
+
+>>> c1="chd"
+>>> c2="chd"
+>>> c3="chd"
+>>> id(c1)
+140599963716888
+>>> id(c2)
+140599963716888 #memory location
+>>> id(c3)
+140599963716888
+--------------
+
+>>> x=10
+>>> y=10
+>>> x is y
+True
+>>> y is x
+True
+----------------
+float value -> int value = int()
+bool value -> int value = int()
+int value -> str value = str()
+complex number -> int/float value -> Can't convert
+Complex -> bool -> bool(x)
+any type -> str == str()
+------------------------
+Fundamental data types vs immutability:
+
+int,bool and str type can be reuse but not float and complex
+
+reuse same object only in the following ranges:
+
+int - > 0-256
+bool - >  always
+str - > always
+
+>>> a=256
+>>> b=256
+>>> id(a)
+140599962739904
+>>> id(b)
+140599962739904
+>>> a=257
+>>> b=257
+>>> id(a)
+140599963538416
+>>> id(b)
+140599963538256
+
+At the time python  interpreter starts from 0-256 integer will be created at the beginning
+A=10 mean it is pointing to the already created object. 
+
+Float/Complex- It is not possible to define the range
+Between 0 and 1 there are infinite numbers of values.
+Reusuability not possible in float and complex
+------------------------
+bytes data type:
+Represent a group of byte number 
+
+>>> x=[10,20,30,40]
+>>> b=bytes(x)
+>>> type(b)
+<class 'bytes'>
+>>> b[0]
+10
+>>> b[-1]
+40
+>>> b[-2]
+30
+>>>
+
+1. In the range 0 to 256
+
+>>> x=[10,20,256,258]
+>>> b=bytes(x)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: bytes must be in range(0, 256)
+>>> x=[10,20,256,258]
+
+2. bytes data types are immuitable 
+
+2. bytes data types are immuita>>> x=[10,20,255]
+>>> b=bytes(x)
+>>> b[0]=120
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'bytes' object does not support item assignment
+
+-----------------------
+bytes Arrays are immutable.
+
+Bytes   | Bytes Array
+immuitable | mutable
+-----------------------
+
+>>> x=[10,20,25]
+>>> b=bytearray(x)
+>>> type(b)
+<class 'bytearray'>
+>>> b[0]=210
+>>> for  i in b: print(i)
+...
+210
+20
+25
+-----------------------
+List
+
+1.Insertion order is Preserve 
+2.duplicates are allowed
+3.Growable
+4.heterogeneous
+5.append,remove possible
+6.values should be enclosed with []
+
+>>> l.append(10)
+>>> l.append(11)
+>>> l.append(12)
+>>> print(l)
+[10, 11, 12]
+>>> print(l)
+[10, 11, 12]
+>>> l.append('durga')
+>>> print(l)
+[10, 11, 12, 'durga']
+>>> l.append(' ')
+>>> print(l)
+[10, 11, 12, 'durga', ' ']
+>>> l.append('    ')
+>>> print(l)
+[10, 11, 12, 'durga', ' ', '    ']
+>>> l.append('None')
+>>> print(l)
+[10, 11, 12, 'durga', ' ', '    ', 'None']
+>>> l.append(None)
+>>> print(l)
+[10, 11, 12, 'durga', ' ', '    ', 'None', None]
+>>> l[0]
+10
+>>> l[-1]
+>>> l[1:5]
+[11, 12, 'durga', ' ']
+>>>
+
+-----------------------------
+bytes and bytes array we can use in the image
+-----------------------------
+Difference between list and typle
+List | Typle
+Mutability | Immutability
+-----------------------------
+>>> l=[10,20,30,40]
+>>> t=(10,20,30)
+>>> type(l)
+<class 'list'>
+>>> type(t)
+<class 'tuple'>
+-----------------------
+>>> t=(10,'durga',True,20)
+>>> t[0]
+10
+>>> t[1:3
+... ]
+('durga', True)
+>>> t[0]=100
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>>
+--------------------------
+
+range():
+
+range data type present a sequence of values
+immutable
+
+Example:-
+>>> s=range(10)
+>>> for i in s:
+...      print(i)
+...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+----------------------------
+Example of range is immutable 
+>>> r=range(10)
+>>> r[0]=777
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'range' object does not support item assignment
+--------------------------
+Example of range between 10 to 15 is from 10 to 14 only
+>>> s=range(10,15)
+>>> for i in s:
+...   print(i)
+...
+10
+11
+12
+13
+14
+---------------------------
+Example: range of 10 to 15 increament by 2
+>>> s=range(10,15,2)
+>>> for i in s: print(i)
+...
+10
+12
+14
+---------------------------
+
+>>> range(10.5,20.6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'float' object cannot be interpreted as an integer
+>>>
+---------------------------
+
+Set:  Data type
+
+No duplicate
+No order
+
+
+Difference between 
+
+          List      | Set  |  typle  | range
+Duplicate: allowed  | No
+Order    : allowed  | No
+Represent:  []      | {}   | ()
+append      yes     | no
+add/remove  yes     | yes
+immutable   no      | no   |   yes   | yes
+------------------------------------
+Set: Eg duplicate not allowed:-/
+
+>>> s={10,20,30,10,10,20,30}
+>>> print(s)
+{10, 20, 30}
+------------------------------------
+Set: 
+
+1. Indexing and Slicing(subscriptable) not valid for set 
+   2. because there is no insertion order 
+        3.heterogeneous allowed
+                   4.slicing not allowed
+5. growable    
+
+>>> s={10,20,30,10,10,20,30}
+>>> print(s)
+{10, 20, 30}
+>>> s[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object does not support indexing
+>>> s[0:2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object is not subscriptable
+>>>
+
+---------------------------------
+You can add and remove in the set
+Therefore its not immutable.
+>>> s.add('pure')
+>>> print(s)
+{'pure', 10, 'durga', 20, 30}
+>>> s.add('10.5')
+>>> print(s)
+{'pure', 10, 'durga', 20, '10.5', 30}
+>>> s.remove(10)
+>>> print(s)
+{'pure', 'durga', 20, '10.5', 30}
+>>>
+
+In Set: order not matter
+
+>>> s=set()
+>>> for i in range(10):
+...      s.add(i)
+...
+>>> print(s)
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+>>> s={'durga','shiva','rohan','apol'}
+>>> print(s)
+{'apol', 'rohan', 'shiva', 'durga'}
+>>>
+
+---------------------------------
+
+bytes(IM)  and bytearray(M)
+
+Eg Bytes:-
+
+
+>>> elements = [0, 200, 50, 25, 10, 255]
+>>> values = bytes(elements)
+>>> print(values)
+b'\x00\xc82\x19\n\xff'
+>>>  values[0] = 5
+  File "<stdin>", line 1
+    values[0] = 5
+    ^
+IndentationError: unexpected indent
+>>> values[0] = 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'bytes' object does not support item assignment
+--------------
+Eg bytearray:>
+
+>>> elements = [0, 200, 50, 25, 10, 255]
+>>> values = bytearray(elements)
+>>> values[0] = 5
+>>> values[1] = 0
+>>>
+>>> for value in values:
+...     print(value)
+...
+5
+0
+50
+25
+10
+255
+
+
+--------------------
+
+list(M) and tuple(IM)
+
+---------------------
+set(M) and frozenset(IM) only difference
+
+>>> s={10,20,30,40}
+>>> fs=frozenset(s)
+>>> fs
+frozenset({40, 10, 20, 30})
+>>> fs.add(50)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'frozenset' object has no attribute 'add'
+
+frozenset we can used for tokens we don't want to change them
+-------------------------
+dict:- {}  dict is most commonly used
+
+By default dict is mutable
+
+d={key:value}
+d={100:'durga',200:'Shiva',300:'ravi'}
+
+         	Key  |   value
+
+Duplicate:  No 		 Yes
+
+
+
+Empty set =--->     s=set()
+Empty dict =--->    s={}
+
+>>> d1={}
+>>> type(d1)
+<class 'dict'>
+
+
+>>> d1=set()
+>>> type(d1)
+<class 'set'>
+
+Dict mutable but order not important
+
+>>> d1={}
+>>> d1[100]='Shehbab'
+>>> d1[200]='kakkar'
+>>> print(d1)
+{100: 'Shehbab', 200: 'kakkar'}
+>>>
+>>> type(d1)
+<class 'dict'>
+>>>
+
+
+------------------------
+
+bytes and bytearray --> to represent binary data
+like images, videos and audio files
+
+Sequence of char  we can represent using str
+
+1.int:
+
+To represent whole numbers
+Integral numbers
+Immutable
+
+2. float:
+
+123.45
+Immutable
+f=123.456
+
+3. Complex:
+
+a+bj --  j is compulary
+Immutable
+
+4. bool:   True  and false
+
+True internally means 1
+Flase internally means 0
+True+True=2
+
+immutable
+
+5. str:  Most commonly used data type
+
+Immutable means non-changeable nature 
+
+6. Bytes:
+
+  0 to 256 range
+  Immutable 
+
+7. Bytearray:
+   
+   Mutable
+
+8. range:
+
+    range(10)  -> 0-9
+    range(10,30) -> 10 to 29
+    range(10,100,5) -> 
+
+     Immutable
+
+9. list:
+   
+   insertion order
+   duplicates
+   heterogeneous objects
+   growable
+   [] 
+   mutable // for immutable use typle
+   l=[10,20,30]
+   type(l)
+
+10. Type:
+     
+    t=(10,20,30,40)
+    Immutable 
+    t[0]=777
+
+11. set:
+   
+    don't want to duplicate
+    group of values where order is not important
+    s{1,2,3}
+    s{2,3,1}
+    s{1,3,2} 
+    index concept not possible
+    slicing not available
+    mutable
+    s=set() #creating an empty set
+
+12. frozenset:
+     
+   s={10,20,30,40}
+   fs=frozenset(s)
+   Immutable
+ 
+13. None Data Type:
+
+    Use when function not return any value
+
+    >>> def f1():
+    ...     a=10
+    
+    >>> print(f1())
+    None
+
+===================================================
+
+14.  Pass:
+     
+def f1():
+  pass
+
+15. Escape character:-
+
+\n \t \r 
+s="Shehbab \n kakkar"
+print(s)
+
+>>> s="""Shehbab is "GOOD" boy obviously"""
+>>> print(s)
+Shehbab is "GOOD" boy obviously
+>>>
+
+>>> s="Shehbab is \"GOOD\" boy obviously"
+>>> t='Shehbab is \"GOOD\" boy obviously'
+>>> print(s);print(t)
+Shehbab is "GOOD" boy obviously
+Shehbab is "GOOD" boy obviously
+
+/////////////////////////////////////////////////////
+
+Constants:
+
+There is no way to define constant in python.
+Its developer responsiblity not to change the value
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

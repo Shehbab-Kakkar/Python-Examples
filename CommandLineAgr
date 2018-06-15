@@ -1,0 +1,70 @@
+::COmmand Line Arguments::
+::::::::::::::::::::::::::
+
+1.Command line Argument stored in the list form
+2. argv  module we have to load
+3. First command line agrument is file name
+
+
+[root@centos7 Python]# cat CommandLineAgr.py
+#!/usr/bin/python3.6
+from sys import argv
+print(type(argv))
+
+[root@centos7 Python]# ./CommandLineAgr.py 10 20 30
+<class 'list'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
