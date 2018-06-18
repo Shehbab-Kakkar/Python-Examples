@@ -1,6 +1,9 @@
 #!/bin/bash
 # Ask the user for their name
-ROOT_DIR="/root/Python/"
+echo "Enter the directory name:" 
+read directory
+ROOT_DIR="/root/Python/${directory}/"
+ROOT_SAMPLE="/root/Python/"
 echo "List of all files"
 ls ${ROOT_DIR}
 printf "\n\n"
@@ -9,25 +12,28 @@ read varname
 
 system () {
   case "$options" in
-      "d") rm -rf ${ROOT_DIR}$varname
+      "n") touch ${ROOT_DIR}${varname}
+         ;;
+      "d") rm -rf ${ROOT_DIR}${varname}
          ;;
       "r") echo "Enter new filename"
          read newname
-         mv ${ROOT_DIR}$varname ${ROOT_DIR}$newname ; chmod +x  $varname
+         mv ${ROOT_DIR}${varname} ${ROOT_DIR}${newname} ; chmod +x  ${ROOT_DIR}${varname}
          ;;
        *) exit
          ;;
   esac
 }
 
-if test -f $varname
+if test -f ${ROOT_DIR}$varname
 then
    echo $varname already exists
-   echo "Press 'd' for delete \n Press 'r' for rename \n Press '*' for exit"
+   echo -e "Press 'd' for delete \n Press 'n' for new file\n  Press 'r' for rename \n Press '*' for exit"
    read options
    system
 else
-   cp ${ROOT_DIR}sample.py $varname ; chmod +x  ${ROOT_DIR}${varname}
+   cp ${ROOT_SAMPLE}sample.py  ${ROOT_DIR}${varname} ; chmod +x  ${ROOT_DIR}${varname}
    echo "File $varname created."
 fi
+
 

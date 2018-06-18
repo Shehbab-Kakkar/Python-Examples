@@ -5,7 +5,7 @@ print(argv[1:])
 print(argv[1])
 print(argv[2])
 print(argv[:])
-# import sys
-# print(sys.argv)
+import sys
+print(sys.argv)
 #
 
