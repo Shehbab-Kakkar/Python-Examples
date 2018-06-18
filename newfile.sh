@@ -2,7 +2,7 @@
 # Ask the user for their name
 echo "Enter the directory name:" 
 read directory
-ROOT_DIR="/root/Python/${directory}/"
+ROOT_DIR="${directory}"
 ROOT_SAMPLE="/root/Python/"
 echo "List of all files"
 ls ${ROOT_DIR}
@@ -18,7 +18,7 @@ system () {
          ;;
       "r") echo "Enter new filename"
          read newname
-         mv ${ROOT_DIR}${varname} ${ROOT_DIR}${newname} ; chmod +x  ${ROOT_DIR}${varname}
+         mv ${ROOT_DIR}${varname} ${ROOT_DIR}${newname} ; chmod +x  ${ROOT_DIR}${newname}
          ;;
        *) exit
          ;;
