@@ -18,14 +18,15 @@ system () {
          ;;
       "r") echo "Enter new filename"
          read newname
-         mv  ${ROOT_DIR}${varname} ${ROOT_DIR}${newname} ; chmod +x  ${ROOT_DIR}${newname}
+         mv -r ${ROOT_DIR}${varname} ${ROOT_DIR}${newname} ; chmod +x  ${ROOT_DIR}${newname}
          ;;
        *) exit
          ;;
   esac
 }
 
-if [ -f ${ROOT_DIR}$varname ]; then
+if [ -f "${ROOT_DIR}${varname}" ]
+then
    echo $varname already exists
    echo -e "Press 'd' for delete \n Press 'n' for new file\n  Press 'r' for rename \n Press '*' for exit"
    read options
@@ -39,5 +40,3 @@ elif [ $(find ${directory} -type d -name "*Bash*" | wc -l ) != "0" ]; then
 else
    echo "Nothing"
 fi
-
-
